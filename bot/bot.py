@@ -5,7 +5,12 @@ from telegram.ext import (
     ConversationHandler, filters
 )
 import json, re, datetime, os
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
 from config import TOKEN, ADMIN_IDS
+
 
 FILTERS_FILE = os.path.join(os.path.dirname(__file__), 'filters.json')
 WARNINGS_FILE = os.path.join(os.path.dirname(__file__), 'warnings.json')
